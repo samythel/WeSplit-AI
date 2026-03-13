@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeSplit AI - Split restaurant bills instantly</title>
+<meta name="description" content="Snap a photo of your restaurant receipt. WeSplit AI extracts every item and splits the bill fairly among your group in seconds.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1a1a1a; background: #fff; }
+  .hero { background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%); color: #fff; padding: 80px 24px 96px; text-align: center; }
+  .hero-badge { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 99px; padding: 6px 16px; font-size: 13px; letter-spacing: .5px; margin-bottom: 28px; }
+  .hero h1 { font-size: clamp(36px, 6vw, 64px); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+  .hero h1 span { color: #60a5fa; }
+  .hero p { font-size: 19px; opacity: .8; max-width: 520px; margin: 0 auto 40px; line-height: 1.6; }
+  .cta { display: inline-block; background: #fff; color: #1e3a8a; font-weight: 700; font-size: 17px; padding: 16px 36px; border-radius: 14px; text-decoration: none; transition: transform .15s; }
+  .cta:hover { transform: translateY(-2px); }
+  .features { max-width: 960px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; }
+  .card { background: #f8fafc; border-radius: 16px; padding: 32px 28px; }
+  .card-icon { font-size: 36px; margin-bottom: 16px; }
+  .card h2 { font-size: 19px; font-weight: 700; margin-bottom: 10px; }
+  .card p { font-size: 15px; color: #475569; line-height: 1.6; }
+  .pricing { background: #f1f5f9; padding: 80px 24px; text-align: center; }
+  .pricing h2 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+  .pricing .sub { color: #64748b; margin-bottom: 48px; font-size: 16px; }
+  .plans { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+  .plan { background: #fff; border-radius: 16px; padding: 36px 32px; width: 280px; text-align: left; border: 2px solid transparent; position: relative; }
+  .plan.featured { border-color: #1e3a8a; }
+  .plan-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: #1e3a8a; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 99px; white-space: nowrap; }
+  .plan h3 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .price { font-size: 36px; font-weight: 800; margin: 12px 0 4px; }
+  .price span { font-size: 16px; font-weight: 400; color: #64748b; }
+  .plan ul { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+  .plan li { font-size: 15px; color: #334155; padding-left: 22px; position: relative; }
+  .plan li::before { content: '✓'; position: absolute; left: 0; color: #1e3a8a; font-weight: 700; }
+  footer { text-align: center; padding: 40px 24px; font-size: 14px; color: #94a3b8; }
+  footer a { color: #64748b; text-decoration: none; margin: 0 12px; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-badge">Powered by Google Gemini AI</div>
+  <h1>Split your bill<br><span>in seconds.</span></h1>
+  <p>Snap a photo of any restaurant receipt. WeSplit AI reads every line item and splits the bill fairly among your group instantly.</p>
+  <a class="cta" href="https://apps.apple.com/app/id6760432771">Download on the App Store</a>
+</section>
+
+<div class="features">
+  <div class="card">
+    <div class="card-icon">📷</div>
+    <h2>Instant receipt scanning</h2>
+    <p>Point your camera at any receipt. Our AI extracts every dish, price, tax, and tip automatically.</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🗣️</div>
+    <h2>Assign by voice</h2>
+    <p>Say "I had the burger and half the fries" and WeSplit matches your words to the receipt.</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🌍</div>
+    <h2>21 currencies supported</h2>
+    <p>Works in USD, EUR, GBP, JPY, INR, BRL, KRW, and 14 more. The app adapts to wherever you are.</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🔒</div>
+    <h2>Privacy first</h2>
+    <p>No account required. Your receipts are never stored on our servers. Images are only temporarily transmitted for analysis.</p>
+  </div>
+</div>
+
+<section class="pricing">
+  <h2>Simple pricing</h2>
+  <p class="sub">Start for free. Upgrade when you're ready.</p>
+  <div class="plans">
+    <div class="plan">
+      <h3>Free</h3>
+      <div class="price">$0 <span>forever</span></div>
+      <ul>
+        <li>5 receipt scans per month</li>
+        <li>All currencies</li>
+        <li>Voice item assignment</li>
+        <li>Unlimited group members</li>
+      </ul>
+    </div>
+    <div class="plan featured">
+      <div class="plan-badge">Most popular</div>
+      <h3>WeSplit Pro</h3>
+      <div class="price">$1.99 <span>/ month</span></div>
+      <ul>
+        <li>Unlimited scans</li>
+        <li>All Free features</li>
+        <li>Ad-free experience</li>
+        <li>Priority AI processing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>2026 WeSplit AI</p>
+  <p style="margin-top:12px">
+    <a href="privacy">Privacy Policy</a>
+    <a href="terms">Terms of Use</a>
+  </p>
+</footer>
+
+</body>
+</html>
