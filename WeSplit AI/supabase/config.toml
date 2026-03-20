@@ -1,0 +1,4 @@
+project_id = "wrlnirzdjulgpaqywahp"
+
+[functions.wesplit-api]
+verify_jwt = false

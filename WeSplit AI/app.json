@@ -1,0 +1,83 @@
+{
+  "expo": {
+    "name": "WeSplit",
+    "slug": "wesplit-mobile",
+    "description": "Scan receipts, split bills, and track shared expenses with friends and family.",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wesplit.ai",
+      "buildNumber": "1",
+      "usesIcloudStorage": false,
+      "entitlements": {
+        "com.apple.developer.in-app-payments": []
+      },
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "WeSplit uses your camera to scan receipt photos for line-item extraction.",
+        "NSPhotoLibraryUsageDescription": "WeSplit uses your photo library so you can import receipt images.",
+        "NSMicrophoneUsageDescription": "WeSplit uses your microphone to capture spoken orders for each person.",
+        "NSSpeechRecognitionUsageDescription": "WeSplit converts speech to text so you can assign receipt items by voice.",
+        "NSPhotoLibraryAddUsageDescription": "WeSplit may save exported receipt breakdown images to your photo library."
+      }
+    },
+    "android": {
+      "package": "com.wesplit.ai",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/icon.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "com.android.vending.BILLING"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFFFFF",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 220,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "WeSplit uses your photo library so you can import receipt images.",
+          "cameraPermission": "WeSplit uses your camera to scan receipt photos for line-item extraction.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "WeSplit uses your microphone to capture spoken orders for each person.",
+          "speechRecognitionPermission": "WeSplit converts speech to text so you can assign receipt items by voice.",
+          "androidSpeechServicePackages": [
+            "com.google.android.googlequicksearchbox"
+          ]
+        }
+      ],
+      "react-native-iap",
+      "expo-secure-store"
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
